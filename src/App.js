@@ -36,25 +36,28 @@ function App() {
   return (
     <div className="App">
       
-      <select onChange={onChangeImage}>
-        <option value="fire">Casa en llamas</option>
-        <option value="futurama">Futurama</option>
-        <option value="history">History Channel</option>
-        <option value="matrix">Matrix</option>
-        <option value="philosoraptor">Philosiraptor</option>
-        <option value="smart">Smart guy</option>
-      </select>
+      <div id="menu">
+        <select onChange={onChangeImage}>
+          <option value="fire">Casa en llamas</option>
+          <option value="futurama">Futurama</option>
+          <option value="history">History Channel</option>
+          <option value="matrix">Matrix</option>
+          <option value="philosoraptor">Philosiraptor</option>
+          <option value="smart">Smart guy</option>
+        </select>
 
-      <input onChange={onChangeLinea1} type = "text" placeholder='First line'></input>
-      <input onChange={onChangeLinea2}type = "text" placeholder='Second line'></input>
-
+        <input onChange={onChangeLinea1} type = "text" placeholder='First line'></input>
+        <input onChange={onChangeLinea2}type = "text" placeholder='Second line'></input>
+      
+        <button onClick={onClickExport}>Exportar</button>
+      </div>
+      
       <div id="memeContainer">
         <img src={"/img/"+ image +".jpg"}></img>
         <span id="firstLine">{linea1}</span>
         <span id="secondLine">{linea2}</span>
       </div>
 
-      <button onClick={onClickExport}>Exportar</button>
     </div>
   );
 }

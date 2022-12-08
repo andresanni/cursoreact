@@ -1,29 +1,56 @@
 
 .App
 {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center; 
+  justify-content: space-between;
+  width: 800px;
+  margin-left: 20px;
+}
+#menu
+{
   display: flex;
   flex-direction: column;
-  align-items: center; 
 }
-
 select
 {
   display: inline;
   font-size: 18px;
+  width: 210px;
+  margin: 10px;
+  border-radius: 6px;
+  padding: 4px;
+  margin-bottom: 30px;
+}
+input
+{
+  display: inline;
+  font-size: 18px;
   width: 200px;
-  margin: 30px;
-  border-radius: 10px;
+  margin: 10px;
+  border-radius: 6px;
+  padding: 4px;
+}
+button
+{
+  display: inline;
+  font-size: 18px;
+  width: 200px;
+  margin: 10px;
+  border-radius: 6px;
   padding: 4px;
 }
 
 #memeContainer
 {
-  margin: auto;
+  
   width: 450px;
   height: 450px;
   text-align: center;
   position: relative;
-  
+   
 }
 img
 {
@@ -58,3 +85,4 @@ span
 {
   bottom:0;
 }
+
