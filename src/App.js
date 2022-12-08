@@ -32,17 +32,17 @@ function App() {
         <option value="matrix">Matrix</option>
         <option value="philosoraptor">Philosiraptor</option>
         <option value="smart">Smart guy</option>
-      </select><br/>
+      </select>
 
-      <input onChange={onChangeLinea1} type = "text" placeholder='First line'></input><br/>
-      <input onChange={onChangeLinea2}type = "text" placeholder='Second line'></input><br/>
+      <input onChange={onChangeLinea1} type = "text" placeholder='First line'></input>
+      <input onChange={onChangeLinea2}type = "text" placeholder='Second line'></input>
 
-      <div>
-        <span>{linea1}</span><br/>
-        <span>{linea2}</span>
+      <div id="memeContainer">
         <img src={"/img/"+ image +".jpg"}></img>
-
+        <span id="firstLine">{linea1}</span>
+        <span id="secondLine">{linea2}</span>
       </div>
+
       <button>Exportar</button>
     </div>
   );
