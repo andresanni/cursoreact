@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from 'react';
+import html2canvas from 'html2canvas'
 
 function App() {
 
@@ -20,6 +21,16 @@ function App() {
     
   }
 
+  function onClickExport(evento){
+    html2canvas(document.querySelector("#memeContainer")).then(canvas => {
+    
+      var img = canvas.toDataURL("image/png");
+      var link = document.createElement("a");
+      link.download = "meme.png";
+      link.href = img;
+      link.click();
+  });
+  }
 
 
   return (
@@ -43,7 +54,7 @@ function App() {
         <span id="secondLine">{linea2}</span>
       </div>
 
-      <button>Exportar</button>
+      <button onClick={onClickExport}>Exportar</button>
     </div>
   );
 }
